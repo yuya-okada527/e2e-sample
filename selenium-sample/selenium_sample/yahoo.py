@@ -1,15 +1,21 @@
 """
 Yahoo不動産をSeleniumで操作するサンプル
 """
+import argparse
 import os
 from time import sleep
 from pathlib import Path
 
-from selenium.webdriver import Chrome
+from selenium.webdriver import Chrome, ChromeOptions
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import WebDriverWait
+
+# 引数の解析
+PARSER = argparse.ArgumentParser(description="Yahoo不動産をSeleniumで操作するサンプルスクリプト")
+PARSER.add_argument("--headless", action="store_true", help="headlessモードで動かすかどうかを指定します.")
+ARGS = PARSER.parse_args()
 
 # Yahoo不動産トップURL
 YAHOO_REALESTATE = "https://realestate.yahoo.co.jp/"
@@ -25,7 +31,10 @@ def new_mansion():
     新築マンションをSeleniumで操作するサンプル
     """
     print("新築ブラウズ開始")
-    with Chrome() as driver:
+    options = ChromeOptions()
+    if ARGS.headless:
+        options.add_argument("--headless")
+    with Chrome(options=options) as driver:
         # デフォルトのタイムアウト時間を設定
         wait = WebDriverWait(driver, 10)
         
@@ -61,6 +70,13 @@ def new_mansion():
 
 
 def screenshot(driver, file_name):
+    """
+    スクリーンショットを取得する.
+    headlessモード出ない場合、きれいに取れません.
+    """
+    # 作成ディレクトリを作成
+    os.makedirs(IMAGE_DIR, exist_ok=True)
+
     # 画面のサイズを設定
     w = driver.execute_script("return document.body.scrollWidth")
     h = driver.execute_script("return document.body.scrollHeight")
