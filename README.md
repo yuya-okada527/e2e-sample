@@ -14,10 +14,10 @@ WEB アプリケーションの E2E テスト自動化のための検証リポ�
 
   ```bash
   # poetryの場合
-  poetry add selenium
+  $ poetry add selenium
 
   # pipの場合
-  pip install selenium
+  $ pip install selenium
   ```
 
 - webdriver
@@ -27,14 +27,14 @@ WEB アプリケーションの E2E テスト自動化のための検証リポ�
   ```bash
   # Homebrewを使用（Mac）
   # 念のためHomebrewをUpdate
-  brew tap homebrew/cask
+  $ brew tap homebrew/cask
 
   # chromedriverのインストール
-  brew install --cask chromedriver
+  $ brew install --cask chromedriver
 
   # 確認(Chromeのバージョンと対応していることを確認)
-  brew info --cask chromedriver
-  chromedriver: 87.0.4280.20
+  $ brew info --cask chromedriver
+  >> chromedriver: 87.0.4280.20
   ...
   ```
 
