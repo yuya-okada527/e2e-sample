@@ -37,3 +37,10 @@ WEB アプリケーションの E2E テスト自動化のための検証リポ�
   chromedriver: 87.0.4280.20
   ...
   ```
+
+## 参考サイト
+
+- Selenium for Python
+  - https://qiita.com/memakura/items/20a02161fa7e18d8a693
+- Selenium 公式(日本語)
+  - https://www.selenium.dev/documentation/ja/
