@@ -44,3 +44,5 @@ WEB アプリケーションの E2E テスト自動化のための検証リポ�
   - https://qiita.com/memakura/items/20a02161fa7e18d8a693
 - Selenium 公式(日本語)
   - https://www.selenium.dev/documentation/ja/
+- e2e テストツール
+  - http://var.blog.jp/archives/82577944.html
