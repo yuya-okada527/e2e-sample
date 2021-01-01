@@ -1,3 +1,6 @@
+# パッケージ
 *.venv/
+*node_modules/
 
+# スクリーンショット保存ディレクトリ
 selenium-sample/selenium_sample/images/
