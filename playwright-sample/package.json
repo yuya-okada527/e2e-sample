@@ -1,8 +1,8 @@
 {
-  "name": "playwright-sample",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "playwright test"
+  },
   "devDependencies": {
     "@playwright/test": "^1.15.0"
   }
