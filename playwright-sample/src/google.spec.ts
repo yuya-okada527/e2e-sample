@@ -4,7 +4,7 @@ test("test", async ({ page }) => {
   await page.goto("https://www.google.com/");
   // 検索ボックスにPlaywrightと入力
   await page.fill('[aria-label="検索"]', "playwright");
-  // エンターキーを謳歌
+  // エンターキーを押下
   await Promise.all([
     page.waitForNavigation(),
     page.press('[aria-label="検索"]', "Enter"),
